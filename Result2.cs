@@ -2,7 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Evently.Common.Domain;
 
-public class Result
+public class Result2
 {
     public Result(bool isSuccess, Error error)
     {
