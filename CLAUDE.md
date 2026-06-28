@@ -23,6 +23,33 @@ API -> depends on Application + Infrastructure
 - Use Result pattern instead of throwing exceptions for business failures.
 - Follow existing project conventions before introducing new patterns.
 
+## Tech Stack
+
+- .NET 10
+- ASP.NET Core Minimal APIs
+- EF Core
+- PostgreSQL
+- Redis
+- Serilog
+- Docker
+
+## Commands
+
+Build:
+`dotnet build`
+
+Run tests:
+`dotnet test`
+
+Run API:
+`dotnet run --project src/API/SalonCloud.Api`
+
+## Don't
+
+- Don't add new NuGet packages without justification.
+- Don't place business logic inside endpoints/controllers.
+- Don't access DbContext directly from API layer.
+
 ## 1. Think Before Coding
 
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
