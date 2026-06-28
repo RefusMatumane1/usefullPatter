@@ -4,6 +4,25 @@ Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-s
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
+## Architecture
+
+Clean Architecture:
+
+Domain -> no dependencies
+Application -> depends on Domain
+Infrastructure -> depends on Application + Domain
+API -> depends on Application + Infrastructure
+
+## Rules
+
+- Never reference Infrastructure from Domain.
+- Controllers/endpoints must remain thin.
+- Business logic belongs in Application services or use cases.
+- Use Repository Pattern for data access.
+- Use FluentValidation for request validation.
+- Use Result pattern instead of throwing exceptions for business failures.
+- Follow existing project conventions before introducing new patterns.
+
 ## 1. Think Before Coding
 
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
